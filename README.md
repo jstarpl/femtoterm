@@ -15,3 +15,7 @@ Flags:
 ```
 
 If run without a `<port-name>` argument it will attempt to list available serial port devices on your system.
+
+Download
+---
+For a Windows x64 binary, get the latest nightly build from the last [GitHub Actions run](https://nightly.link/jstarpl/femtoterm/workflows/go/main).
