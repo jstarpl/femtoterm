@@ -70,7 +70,11 @@ func main() {
 			if n == 0 {
 				break
 			}
-			w.Write(buff[0:n])
+			_, err = w.Write(buff[0:n])
+			if err != nil {
+				log.Fatal(err)
+				break
+			}
 		}
 		wg.Done()
 	})()
@@ -88,7 +92,11 @@ func main() {
 			if n == 0 {
 				break
 			}
-			port.Write(buff[0:n])
+			_, err = port.Write(buff[0:n])
+			if err != nil {
+				log.Fatal(err)
+				break
+			}
 		}
 		wg.Done()
 	})()
